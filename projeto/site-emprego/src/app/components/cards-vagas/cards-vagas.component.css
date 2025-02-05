@@ -1,0 +1,100 @@
+section{
+    /* border: 2px solid blue; */
+    border-left: 4px solid hsl(180, 29%, 50%);
+    border-radius: 5px;
+
+    display: flex;
+    padding: 20px;
+}
+
+.box-img{
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .box-img>img{
+    border: 2px solid;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+
+ }
+
+.box-info{
+    border: 1px solid blue;
+}
+
+    
+    .box-info .employer{
+        border: 1px solid blue;
+        text-transform: capitalize;
+    }
+
+    .box-info h6{
+        font-size: .7rem;
+        font-weight: bolder;
+
+    }
+
+    .box-info h3{
+        font-size: 1rem;
+        font-weight: bold;
+
+    }
+
+    .box-info>.row{
+        display: flex;
+        align-items: center;
+        border: 1px solid red;
+        height: 34%;
+    }
+
+    .box-info ul{
+        display: flex;
+        border: 1px solid blue;
+        list-style: none;
+        padding: 0;
+    }
+
+    .box-info ul li{
+        display: flex;
+        border: 1px solid;
+        width: 100%;
+    }
+
+
+
+.box-skills{
+    border: 1px solid rgb(192, 192, 31);
+    display: flex;
+    align-items: center;
+}
+
+.box-skills>.row{
+    display: flex;
+
+    border: 1px solid red;
+    height: 34%;
+    width: 120%;
+}
+
+    .box-skills>.row{
+        display: flex;
+        border: 1px solid red;
+        height: 34%;
+    }
+
+    .box-skills ul{
+        display: flex;
+        border: 1px solid blue;
+        list-style: none;
+        padding: 0;
+    }
+
+    .box-skills ul li{
+        display: flex;
+        border: 1px solid;
+        width: 100%;
+    }

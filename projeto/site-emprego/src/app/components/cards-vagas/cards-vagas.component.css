@@ -1,5 +1,6 @@
 section{
     /* border: 2px solid blue; */
+    background-color: #fff;
     border-left: 4px solid hsl(180, 29%, 50%);
     border-radius: 5px;
 
@@ -8,66 +9,85 @@ section{
 }
 
 .box-img{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 11%;
  }
 
- .box-img>img{
-    border: 2px solid;
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-
- }
-
+ 
 .box-info{
-    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid blue; */
+    margin-left: -3%;
 }
 
     
     .box-info .employer{
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         text-transform: capitalize;
     }
 
     .box-info h6{
-        font-size: .7rem;
+        font-size: .8rem;
         font-weight: bolder;
+        color: hsl(180, 29%, 50%);
+        margin-left: 0%;
+
 
     }
 
     .box-info h3{
         font-size: 1rem;
         font-weight: bold;
+        margin-left: -3%;
+
 
     }
 
     .box-info>.row{
         display: flex;
         align-items: center;
-        border: 1px solid red;
-        height: 34%;
+        /* border: 1px solid red; */
+        height: 25%;
+        margin-bottom: 1%;
     }
 
     .box-info ul{
         display: flex;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         list-style: none;
         padding: 0;
     }
 
     .box-info ul li{
         display: flex;
-        border: 1px solid;
-        width: 100%;
+        align-items: center;
+        /* justify-content: center; */
+        /* border: 1px solid red; */
+        width: 33%;
     }
 
+    .period{
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: hsl(180, 8%, 52%);
+        /* border: 1px solid red; */
+        width: 50%;
+        margin-left: 0%;
+    }
+
+    /* .badges{
+         border: 2px solid;
+         width: 50%;
+    } */
 
 
 .box-skills{
-    border: 1px solid rgb(192, 192, 31);
+    /* border: 1px solid rgb(192, 192, 31); */
     display: flex;
     align-items: center;
 }
@@ -75,26 +95,35 @@ section{
 .box-skills>.row{
     display: flex;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 34%;
     width: 120%;
 }
 
     .box-skills>.row{
         display: flex;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         height: 34%;
     }
 
     .box-skills ul{
         display: flex;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         list-style: none;
         padding: 0;
     }
 
-    .box-skills ul li{
+    span{
+        font-size: 0.7rem;
+        font-weight: bold;
         display: flex;
-        border: 1px solid;
-        width: 100%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        padding: 6px;
+        /* border: 1px solid; */
+        width: auto;
+        background-color: hsla(180, 29%, 50%, 0.185);
+        color:hsl(180, 29%, 50%);
+        /* margin-left: 2%; */
     }

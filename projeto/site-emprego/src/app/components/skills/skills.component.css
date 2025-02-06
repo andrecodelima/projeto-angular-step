@@ -1,0 +1,17 @@
+span{
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    padding: 6px;
+    width: auto;
+    /* background-color: hsla(180, 29%, 50%, 0.185); */
+    color:hsl(180, 29%, 50%);
+    /* margin-left: 2%; */
+}
+
+a{
+    text-decoration: none;
+}

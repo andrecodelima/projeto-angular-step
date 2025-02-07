@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pesquisa',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './pesquisa.component.html',
-  styleUrl: './pesquisa.component.css'
+  styleUrls: ['./pesquisa.component.css']
 })
 export class PesquisaComponent {
 
+  
 }

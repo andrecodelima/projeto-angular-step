@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { CardsVagasComponent } from './components/cards-vagas/cards-vagas.component';
 
+
 @Component({
   selector: 'app-root',
   imports: [HeaderComponent, CardsVagasComponent],

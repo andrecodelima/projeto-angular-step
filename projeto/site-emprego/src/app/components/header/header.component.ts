@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { PesquisaComponent } from '../pesquisa/pesquisa.component';
 
 @Component({
   selector: 'app-header',
-  imports: [PesquisaComponent],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

@@ -4,10 +4,11 @@ import { Observable } from 'rxjs';
 
 export interface Job {
   id: number;
+  logo:string;
   company: string;
   role: string;
   level: string;
-  language: string[]; // Pode ser um array de strings
+  languages: string[]; // Pode ser um array de strings
   tools: string[]; // Pode ser um array de strings
 }
 
@@ -17,7 +18,7 @@ export interface Job {
 
 export class JobServiceService {
 
-  private apiUrl = 'assets/data.json';
+  private apiUrl = '/data.json';
 
   constructor(private http: HttpClient) {}
 

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, output, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,5 +10,11 @@ import { CommonModule } from '@angular/common';
 })
 export class PesquisaComponent {
 
+  @Output() searchEvent = new EventEmitter<string>();
+  
+  onSearch(event : Event){
+    const inputValue = (event.target as HTMLInputElement).value;
+    this.searchEvent.emit(inputValue);
+  }
   
 }

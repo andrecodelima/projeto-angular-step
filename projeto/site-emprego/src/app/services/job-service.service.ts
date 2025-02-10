@@ -8,8 +8,12 @@ export interface Job {
   company: string;
   role: string;
   level: string;
-  languages: string[]; // Pode ser um array de strings
-  tools: string[]; // Pode ser um array de strings
+  languages: string[];  
+  tools: string[]; 
+  position:string[];
+  postedAt:string[];
+  contract:string[];
+  location:string[];
 }
 
 @Injectable({

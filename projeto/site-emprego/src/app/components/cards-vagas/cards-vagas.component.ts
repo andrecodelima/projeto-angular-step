@@ -46,7 +46,8 @@ export class CardsVagasComponent implements OnInit {
       job.role.toLowerCase().includes(searchTerm) ||
       job.level.toLowerCase().includes(searchTerm) ||
       job.languages.some(lang => lang.toLowerCase().includes(searchTerm)) ||
-      job.tools.some(tool => tool.toLowerCase().includes(searchTerm))
+      job.tools.some(tool => tool.toLowerCase().includes(searchTerm)) 
+      
     );
   }
 }

@@ -1,12 +1,23 @@
 section{
     /* border: 2px solid blue; */
     background-color: #fff;
-    border-left: 4px solid hsl(180, 29%, 50%);
-    border-radius: 5px;
+    border-radius: 2px;
+    box-shadow: 0px 3px 8px 0px hsl(180, 29%, 50%);
 
     display: flex;
     padding: 20px;
+
 }
+
+section:hover{
+    border-left: 4px solid hsl(180, 29%, 50%);
+    color:hsl(180, 29%, 50%);
+    border-radius: 5px;
+    transform: scale(1.02);
+    transition: 0.2s;
+    cursor:pointer;
+}
+
 
 .box-img{
     /* border: 1px solid green; */
@@ -32,16 +43,16 @@ section{
     }
 
     .box-info h6{
-        font-size: .8rem;
+        font-size: 1rem;
         font-weight: bolder;
         color: hsl(180, 29%, 50%);
-        margin-left: 0%;
+        margin-left: -100%;
 
 
     }
 
     .box-info h3{
-        font-size: 1rem;
+        font-size: 1.4rem;
         font-weight: bold;
         margin-left: -3%;
 
@@ -92,6 +103,7 @@ section{
     align-items: center;
 }
 
+
 .box-skills>.row{
     display: flex;
 
@@ -113,17 +125,26 @@ section{
         padding: 0;
     }
 
+    .box-skills li:hover{
+        background-color: hsl(180, 29%, 50%);
+    }
+
     span{
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 3px;
-        padding: 6px;
+        height: 60%;
         /* border: 1px solid; */
         width: auto;
         background-color: hsla(180, 29%, 50%, 0.185);
         color:hsl(180, 29%, 50%);
         /* margin-left: 2%; */
+    }
+
+    span:hover{
+        background-color: hsl(180, 29%, 50%);
+        color: #fff;
     }

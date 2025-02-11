@@ -1,43 +1,37 @@
-<app-pesquisa (searchEvent)="filterJobs($event)">
-</app-pesquisa>
+<app-pesquisa (searchEvent)="filterJobs($event)"></app-pesquisa>
 
 <div *ngFor="let job of filteredJobs">
   <section class="row mb-4">
-  
     <div class="box-img col-md-2">
       <img [src]="job.logo" alt="Company Logo">
     </div>
-
     <div class="box-info col-md-4">
       <div class="row employer">
         <ul>
           <li><h6>{{ job.company }}</h6></li>
         </ul>
       </div>
-
       <div class="row">
         <h3>{{ job.position }}</h3>
+        
       </div>
-
       <div class="row">
         <ul class="period">
-          <li>{{ job.postedAt }}</li>      
-          <li>{{ job.contract }}</li>      
-          <li>{{ job.location }}</li>      
+          <li>{{ job.postedAt }}</li>
+          <li>{{ job.contract }}</li>
+          <li>{{ job.location }}</li>
         </ul>
       </div>
     </div>
-
     <div class="box-skills col-md-5">
       <div class="row">
-        <span *ngFor="let lang of job.languages">
+        <span *ngFor="let lang of job.languages" (click)="addSkillFilter(lang)">
           {{lang}}
         </span>
-        <span>
+        <span (click)="addSkillFilter(job.level)">
           {{job.level}}
         </span>
       </div>
     </div>
-
   </section>
 </div>

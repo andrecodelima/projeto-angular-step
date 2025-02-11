@@ -1,4 +1,4 @@
-<form class="form">
+<!-- <form class="form">
     <div class="search-container">
         <ul class="filter-list">
             <li *ngFor="let filter of selectedFilters" class="filter-badge">
@@ -11,5 +11,22 @@
         <input class="form-control" type="search" placeholder="" (keyup.enter)="onSearch($event)">
         <button type="button" (click)="clearFilters()" class="clear-btn">Clear</button>
          
+    </div>
+</form> -->
+
+
+<form class="form">
+    <div class="search-container">
+        <div class="input-wrapper">
+            <input class="form-control" type="search" (keyup.enter)="onSearch($event)">
+            <button type="button" (click)="clearFilters()" class="clear-btn">clear</button>
+        </div>
+        
+        <ul class="filter-list">
+            <li *ngFor="let filter of selectedFilters" class="filter-badge">
+                {{ filter }}
+                <button type="button" (click)="removeFilter(filter)" class="remove-btn">x</button>      
+            </li>
+        </ul>
     </div>
 </form>

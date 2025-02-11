@@ -1,5 +1,15 @@
- 
-<form>
-    <input  class="form-control" type="search" placeholder="Search" (input)="onSearch($event)">
-    <button>clear</button>
+<form class="form">
+    <div class="search-container">
+        <ul class="filter-list">
+            <li *ngFor="let filter of selectedFilters" class="filter-badge">
+                {{ filter }}
+                <button type="button" (click)="removeFilter(filter)" class="remove-btn">x</button>      
+            </li>
+        </ul>
+        
+    
+        <input class="form-control" type="search" placeholder="" (keyup.enter)="onSearch($event)">
+        <button type="button" (click)="clearFilters()" class="clear-btn">Clear</button>
+         
+    </div>
 </form>

@@ -1,4 +1,8 @@
-<app-pesquisa (searchEvent)="filterJobs($event)"></app-pesquisa>
+<app-pesquisa 
+    (searchEvent)="filterJobs($event)"
+    [selectedFilters]="searchFilters"
+    >
+</app-pesquisa>
 
 <div *ngFor="let job of filteredJobs">
   <section class="row mb-4">

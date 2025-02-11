@@ -30,10 +30,16 @@ export class CardsVagasComponent implements OnInit {
     });
   }
 
-  filterJobs(filters: string[]) {
-    this.searchFilters = filters;
-    this.filteredJobs = this.jobs.filter(job =>
-      filters.every(filter =>
+  filterJobs(searchFilters: string | string[]) {
+    if (!searchFilters || (Array.isArray(searchFilters) && searchFilters.length === 0)) {
+      this.filteredJobs = this.jobs; // Se não houver filtros, exibe todas as vagas
+      return;
+    }
+
+    const filters = Array.isArray(searchFilters) ? searchFilters : [searchFilters];
+
+    this.filteredJobs = this.jobs.filter(job => 
+      filters.every(filter => 
         job.company.toLowerCase().includes(filter.toLowerCase()) ||
         job.role.toLowerCase().includes(filter.toLowerCase()) ||
         job.level.toLowerCase().includes(filter.toLowerCase()) ||
@@ -49,4 +55,5 @@ export class CardsVagasComponent implements OnInit {
     }
     this.filterJobs(this.searchFilters);
   }
+  
 }

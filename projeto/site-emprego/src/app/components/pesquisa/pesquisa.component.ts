@@ -1,4 +1,4 @@
-import { Component, EventEmitter, output, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,17 +10,18 @@ import { CommonModule } from '@angular/common';
 })
 export class PesquisaComponent {
 
-  @Output() searchEvent = new EventEmitter<string[]>();
-  selectedFilters: string[] = [];
+  @Output() searchEvent = new EventEmitter<string | string[]>();
+  @Input() selectedFilters: string[] = []; 
+ 
 
   
   onSearch(event: Event) {
-    const inputValue = (event.target as HTMLInputElement).value;
-    if (!this.selectedFilters.includes(inputValue) && inputValue.trim()) {
-      this.selectedFilters.push(inputValue.trim());
-      this.searchEvent.emit(this.selectedFilters);
+    const inputValue = (event.target as HTMLInputElement).value.trim();
+    if (inputValue) {
+      this.searchEvent.emit(inputValue); // Agora enviamos uma string única para pesquisa simples
     }
   }
+
   
   addFilter(tag: string) {
     if (!this.selectedFilters.includes(tag)) {
